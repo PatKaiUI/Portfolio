@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="de" class="bg-main1 text-main2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Patrick Kaiser" />
+    <link rel="icon" href="./pictures/PatKai.webp" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/c4f155c5ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../src/index.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main1: "#171718",
+              main2: "#f4f4f4",
+              alt1: "#a395ae",
+              alt2: "#6e4db2",
+              skillHover: "#66ff6f",
+            },
+            fontFamily: {
+              comforter: ["Comforter Brush", "cursive"],
+              inter: ["Inter", "sans-serif"],
+            },
+            animation: {
+              "bounce-in": "bounceIn 1s ease-in-out",
+              "fade-in": "fadeIn 1s ease-in-out",
+              "slide-up": "slideUp 0.5s ease-out",
+              wiggle: "wiggle 1s ease-in-out infinite",
+            },
+            keyframes: {
+              bounceIn: {
+                "0%": { opacity: "0", transform: "translateY(-20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              wiggle: {
+                "0%": { transform: "rotate(0deg)" },
+                "50%": { transform: "rotate(10deg)" },
+                "100%": { transform: "rotate(0deg)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Patrick's Webfolio</title>
+  </head>
+
+  <body class="bg-main1 text-main2 font-inter min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header
+      class="bg-main1 text-main2 fixed w-full z-50 shadow-md backdrop-blur-md bg-opacity-70"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="../public/img/pictures/PatKaiLogo.webp"
+            alt="Logo von PatKaiUI"
+          />
+          <p class="text-4xl ml-16 font-comforter font-thin">Patrick Kaiser</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="flex items-center">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu flex space-x-8">
+            <li>
+              <a
+                href="./index.html"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#aboutme"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Über mich</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Fähigkeiten</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Projekte</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contact.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+              >
+                Kontakt
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- HERO -->
+      <section
+        class="relative h-screen w-full bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(163,149,174,0.3)]"
+        style="background-image: url('../public/img/pictures/hero-bg.jpg')"
+      >
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div
+          class="container mx-auto ml-6 h-full flex flex-col justify-center pt-16 px-6 pb-30 relative z-10"
+        >
+          <h1
+            class="text-4xl font-bold mb-4 ml-2 animate-[bounceIn_1s_ease-in-out,bounce_1s_ease-in-out_infinite_0.5s]"
+          >
+            Hi 👋!
+          </h1>
+          <p class="text-xl ml-2 max-w-lg animate-[bounceIn_1s_ease-in-out]">
+            Ich bin Patrick,<br />
+            <span class="text-xl max-w-lg animate-[bounceIn_1s_ease-in-out]"
+              >Webentwickler mit Leidenschaft für Design!</span
+            >
+          </p>
+          <!-- CTA-Button -->
+          <div class="flex justify-left mt-6">
+            <a
+              href="./contact.html"
+              class="mt-8 ml-2 px-6 py-2 bg-main2 text-main1 rounded-full font-bold hover:bg-alt1 hover:text-main2 transition-all duration-300 animate-[bounceIn_1s_ease-in-out] text-lg"
+            >
+              Kontakt aufnehmen
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME -->
+      <section
+        id="aboutme"
+        class="py-20 bg-gradient-to-br from-main2 to-alt1 text-main1 shadow-[0_35px_60px_-15px_rgba(163,149,174,0.3)] min-h-[100vh]"
+      >
+        <div class="container mx-auto px-4 sm:px-6 pt-16 md:pt-16">
+          <div
+            class="flex flex-col md:flex-row items-start justify-center gap-24 md:gap-24 max-w-8xl mx-auto h-[calc(100vh-12rem)]"
+          >
+            <div
+              class="relative w-[12rem] h-[12rem] md:w-[26rem] md:h-[32rem] mx-auto md:mx-0 pt-80 md:pt-20 md:mt-0"
+            >
+              <div class="animate-wiggle">
+                <img
+                  src="../public/img/pictures/MeEmoji.webp"
+                  alt="Emoji von Patrick"
+                  loading="lazy"
+                  class="w-full h-full object-cover clip-polygon"
+                />
+              </div>
+            </div>
+            <div
+              class="max-w-3xl ml-0 md:ml-12 mt-16 md:mt-16 px-4 md:px-0 pb-80 md:pb-0"
+            >
+              <h2
+                class="text-5xl mb-12 text-center md:text-left font-comforter"
+              >
+                Über mich
+              </h2>
+              <p class="text-m md:text-lg mb-6 animate-fade-in">
+                Ich bin ein leidenschaftlicher Webentwickler mit einer großen
+                Begeisterung für UI/UX-Design und kreative Gestaltung.
+              </p>
+              <p class="text-m md:text-lg mb-6 animate-fade-in">
+                Derzeit feile ich an meinen Fähigkeiten in HTML, CSS und
+                JavaScript, um bald professionelle Dienstleistungen wie
+                Websites, Logos und mehr anzubieten.
+              </p>
+              <p class="text-m md:text-lg mb-6 animate-fade-in">
+                Ich liebe es, zu coden, zu kreieren und zu designen – quasi ein
+                Dreierpack Kreativität! Ständig auf der Suche nach neuen
+                Herausforderungen, wächst und verändert sich diese Seite
+                regelmäßig.
+              </p>
+              <p class="text-m md:text-lg animate-fade-in">
+                Ich freue mich darauf, deine Ideen mit atemberaubenden Designs
+                und funktionalen Websites zum Leben zu erwecken – denn wer will
+                schon eine langweilige Webseite? 😄
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-20 bg-main1">
+        <div class="container mx-auto px-6 pt-12 md:pt-12">
+          <h2 class="text-5xl mb-12 text-center font-comforter text-main2">
+            Meine Fähigkeiten
+          </h2>
+          <div class="grid md:grid-cols-4 gap-4 md:gap-8">
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-pen-nib text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">UI/UX Design</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[60%]"
+                  data-level="60"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-js text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">JavaScript</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[40%]"
+                  data-level="40"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-html5 text-xl text-main1"></i>
+                <i class="fa-brands fa-css3-alt text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">HTML & CSS</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[70%]"
+                  data-level="70"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-git-alt text-xl text-main1"></i>
+                <i class="fa-brands fa-github-alt text-xl text-main1"></i>
+
+                <h6 class="text-sm font-bold text-main1">Git & GitHub</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[30%]"
+                  data-level="30"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-magnifying-glass text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">SEO</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[25%]"
+                  data-level="25"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-universal-access text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">Accessibility</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[15%]"
+                  data-level="15"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-wordpress text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">WordPress</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[20%]"
+                  data-level="20"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-node-js text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">Node.js</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[45%]"
+                  data-level="45"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-react text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">React</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
+                  data-level="10"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-brands fa-python text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">Python</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
+                  data-level="5"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-database text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">Datenbanken</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[20%]"
+                  data-level="20"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-code text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">API Integration</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[15%]"
+                  data-level="15"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-cart-shopping text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">E-Commerce</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[15%]"
+                  data-level="15"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i
+                  class="fa-solid fa-mobile-screen-button text-xl text-main1"
+                ></i>
+                <h6 class="text-sm font-bold text-main1">Responsive Design</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[50%]"
+                  data-level="50"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i
+                  class="fa-solid fa-screwdriver-wrench text-xl text-main1"
+                ></i>
+                <i class="fa-solid fa-bug text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">
+                  Testing & Debugging
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[25%]"
+                  data-level="25"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-people-roof text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">Agile Methodiken</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[30%]"
+                  data-level="30"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-file-lines text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">Content Management</h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[20%]"
+                  data-level="20"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-share-nodes text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">
+                  Social Media Integration
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
+                  data-level="10"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <div class="flex items-center justify-center gap-6 mb-2">
+                <i class="fa-solid fa-gauge-simple-high text-xl text-main1"></i>
+                <h6 class="text-sm font-bold text-main1">
+                  Performance Optimierung
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
+                  data-level="10"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        class="py-20 bg-gradient-to-br from-alt1 to-main2 text-main2"
+      >
+        <div class="container mx-auto px-8 pt-12 md:pt-12">
+          <h2 class="text-5xl mb-12 text-center font-comforter text-main1">
+            Meine Projekte
+          </h2>
+          <div class="grid md:grid-cols-3 gap-4 md:gap-8">
+            <!-- Project Card 1 -->
+            <div
+              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              <div
+                class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
+                onclick="openModal('./pictures/firstPortfolio.png', 'Full Page on GitHub')"
+              >
+                <img
+                  src="../public/img/pictures/firstPortfolio.png"
+                  alt="Project 1"
+                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-main2">
+                Erstes Portfolio
+              </h3>
+              <p class="text-main2 mb-4">
+                Eine responsive Portfolio-Website mit modernem Design und
+                interaktiven Elementen.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >HTML</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >CSS</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div
+              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              <div
+                class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
+                onclick="openModal('./pictures/TetrisGame.png', 'Full Page on GitHub')"
+              >
+                <img
+                  src="../public/img/pictures/TetrisGame.png"
+                  alt="Project 2"
+                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-main2">Tetris Spiel</h3>
+              <p class="text-main2 mb-4">
+                Ein Tetris Spiel im Browser mit HTML, CSS, JavaScript.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >HTML</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >CSS</span
+                >
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div
+              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              <div
+                class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
+                onclick="openModal('./pictures/NoticeMe.png', 'Full Page on GitHub')"
+              >
+                <img
+                  src="./public/img/pictures/NoticeMe.png"
+                  alt="Project 3"
+                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-main2">
+                Notizen-Konsolen-Programm
+              </h3>
+              <p class="text-main2 mb-4">
+                Ein Notizen-Konsolen-Programm mit Node.js.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+            <!-- Project Card 4 -->
+            <div
+              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              <div
+                class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
+                onclick="openModal('./pictures/toDoApp.png', 'Full Page on GitHub')"
+              >
+                <img
+                  src="./img/pictures/toDoApp.png"
+                  alt="Project 4"
+                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-main2">To-Do-App</h3>
+              <p class="text-main2 mb-4">
+                Eine interaktive To-Do-App mit HTML, CSS, JS, React und DnD-Kit.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >HTML</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >CSS</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                  >React</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal for fullscreen images -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-main1 bg-opacity-90 z-50 hidden items-center justify-center"
+    >
+      <button
+        class="absolute top-4 right-4 text-main2 text-4xl hover:text-alt1 transition-colors duration-300"
+        onclick="closeModal()"
+      >
+        &times;
+      </button>
+      <img
+        id="modalImage"
+        src=""
+        alt=""
+        class="max-h-[90vh] max-w-[90vw] object-contain"
+      />
+    </div>
+
+    <footer
+      class="bg-main1 text-main2 py-8 backdrop-blur-md bg-opacity-70 overflow-hidden"
+    >
+      <div class="container mx-auto px-6">
+        <div
+          class="footer-content flex flex-col md:flex-row justify-between items-start mb-8"
+        >
+          <div class="footer-section mb-6 md:mb-0">
+            <h3 class="text-xl font-bold mb-2 underline">Kontakt</h3>
+            <p class="text-sm">
+              Patrick Kaiser<br />
+              Email:
+              <a
+                href="mailto:mailbox-patrickkaiser@web.de"
+                class="hover:text-alt1 text-sm transition-colors duration-300"
+                >mailbox-patrickkaiser@web.de</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3 class="text-xl font-bold mb-2 underline">Social Media</h3>
+            <div class="icons flex justify-center space-x-5">
+              <a
+                href="https://www.github.com/PatKaiUI"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                class="hover:text-alt1 transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 432 416"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M213.5 0q88.5 0 151 62.5T427 213q0 70-41 125.5T281 416q-14 2-14-11v-58q0-27-15-40q44-5 70.5-27t26.5-77q0-34-22-58q11-26-2-57q-18-5-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 88h-6q-12 31-2 57q-22 24-22 58q0 55 27 77t70 27q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5t-5 3.5t8.5 9q14 7 23 31q1 2 2 4.5t6.5 9.5t13 10.5T130 371t30-2v36q0 13-14 11q-64-22-105-77.5T0 213q0-88 62.5-150.5T213.5 0z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/patrick-kaiser-053316327"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="hover:text-alt1 transition-colors duration-300"
+              >
+                <svg
+                  height="30"
+                  width="30"
+                  viewBox="0 0 14 14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.913 2.362c.26-.268.403-.626.4-.998A1.417 1.417 0 0 0 1.928 0A1.428 1.428 0 0 0 .532 1.364a1.449 1.449 0 0 0 1.396 1.428a1.42 1.42 0 0 0 .985-.43M1.67 4.63c-.587-.013-.987-.022-.987.696v7.992c0 .703.382.689.932.668c.1-.004.205-.008.314-.008c.11 0 .215.004.314.008c.548.02.922.035.922-.668V5.327c0-.718-.392-.71-.976-.696a11.321 11.321 0 0 1-.519 0Zm4.084.015c-.266.053-.437.223-.437.681v7.992c0 .703.367.689.918.668c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.554.02.928.035.928-.668V9.056a1.545 1.545 0 0 1 1.577-1.695a1.534 1.534 0 0 1 1.62 1.663v4.261c0 .704.366.69.917.669c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.551.02.917.035.917-.668V7.83a3.195 3.195 0 0 0-3.388-3.335a2.674 2.674 0 0 0-2.387 1.066c.011-.394-.117-.916-.436-.916c-.092 0-.233-.005-.393-.01c-.4-.012-.92-.028-1.11.01"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex whitespace-nowrap animate-scroll">
+          <p class="inline-block text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

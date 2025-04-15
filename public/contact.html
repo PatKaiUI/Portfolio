@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de" class="bg-main1 text-main2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Patrick Kaiser" />
+    <link rel="icon" href="./pictures/PatKai.webp" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..//src/style/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="..//src/index.js"></script>
+    <script src="..//src/contact.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main1: "#171718",
+              main2: "#f4f4f4",
+              alt1: "#a395ae",
+              alt2: "#6e4db2",
+              skillHover: "#66ff6f",
+            },
+            fontFamily: {
+              comforter: ["Comforter Brush", "cursive"],
+              inter: ["Inter", "sans-serif"],
+            },
+            animation: {
+              "bounce-in": "bounceIn 1s ease-in-out",
+              "fade-in": "fadeIn 1s ease-in-out",
+              "slide-up": "slideUp 0.5s ease-out",
+            },
+            keyframes: {
+              bounceIn: {
+                "0%": { opacity: "0", transform: "translateY(-20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Kontakt - Patrick's Webfolio</title>
+  </head>
+
+  <body class="bg-main1 text-main2 font-inter min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header
+      class="bg-main1 text-main2 fixed w-full z-50 shadow-md backdrop-blur-md bg-opacity-70"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="./pictures/PatKai.webp"
+            alt="Logo von PatKaiUI"
+          />
+          <p class="text-4xl ml-16 font-comforter font-thin">Patrick Kaiser</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="flex items-center">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu flex space-x-8">
+            <li>
+              <a
+                href="./test.html"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#aboutme"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Über mich</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Fähigkeiten</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                >Projekte</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contact.html"
+                target="_blank"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+              >
+                Kontakt
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- CONTACT SECTION -->
+      <section
+        class="relative h-screen w-full bg-cover bg-no-repeat bg-center"
+        style="background-image: url('./pictures/hero-bg.jpg')"
+      >
+        <div class="absolute inset-0 bg-main1 bg-opacity-40"></div>
+        <div
+          class="container mx-auto px-6 py-20 relative z-10 h-full flex items-center justify-center"
+        >
+          <div class="max-w-md w-full mx-auto">
+            <h2 class="text-5xl mb-12 text-center font-comforter text-main2">
+              Kontaktieren Sie mich
+            </h2>
+            <form class="bg-main2/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+              <div class="mb-4">
+                <label
+                  for="name"
+                  class="block text-main1 font-bold mb-1 text-sm"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-3 py-2 rounded-lg border border-alt1 focus:outline-none focus:border-alt2 text-sm"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-main1 font-bold mb-1 text-sm"
+                  >E-Mail</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-3 py-2 rounded-lg border border-alt1 focus:outline-none focus:border-alt2 text-sm text-main1"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="message"
+                  class="block text-main1 font-bold mb-1 text-sm"
+                  >Nachricht</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-3 py-2 rounded-lg border border-alt1 focus:outline-none focus:border-alt2 text-sm text-main1"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-alt1 text-main2 py-2 rounded-lg font-bold hover:bg-alt2 transition-all duration-300 text-sm"
+              >
+                Nachricht senden
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-main1 text-main2 py-8 backdrop-blur-md bg-opacity-70 overflow-hidden"
+    >
+      <div class="container mx-auto px-6">
+        <div
+          class="footer-content flex flex-col md:flex-row justify-between items-start mb-8"
+        >
+          <div class="footer-section mb-6 md:mb-0">
+            <h3 class="text-xl font-bold mb-2 underline">Kontakt</h3>
+            <p class="text-sm">
+              Patrick Kaiser<br />
+              Email:
+              <a
+                href="mailto:mailbox-patrickkaiser@web.de"
+                class="hover:text-alt1 text-sm transition-colors duration-300"
+                >mailbox-patrickkaiser@web.de</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3 class="text-xl font-bold mb-2 underline">Social Media</h3>
+            <div class="icons flex justify-center space-x-5">
+              <a
+                href="https://www.github.com/PatKaiUI"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                class="hover:text-alt1 transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 432 416"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M213.5 0q88.5 0 151 62.5T427 213q0 70-41 125.5T281 416q-14 2-14-11v-58q0-27-15-40q44-5 70.5-27t26.5-77q0-34-22-58q11-26-2-57q-18-5-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 88h-6q-12 31-2 57q-22 24-22 58q0 55 27 77t70 27q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5t-5 3.5t8.5 9q14 7 23 31q1 2 2 4.5t6.5 9.5t13 10.5T130 371t30-2v36q0 13-14 11q-64-22-105-77.5T0 213q0-88 62.5-150.5T213.5 0z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/patrick-kaiser-053316327"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="hover:text-alt1 transition-colors duration-300"
+              >
+                <svg
+                  height="30"
+                  width="30"
+                  viewBox="0 0 14 14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.913 2.362c.26-.268.403-.626.4-.998A1.417 1.417 0 0 0 1.928 0A1.428 1.428 0 0 0 .532 1.364a1.449 1.449 0 0 0 1.396 1.428a1.42 1.42 0 0 0 .985-.43M1.67 4.63c-.587-.013-.987-.022-.987.696v7.992c0 .703.382.689.932.668c.1-.004.205-.008.314-.008c.11 0 .215.004.314.008c.548.02.922.035.922-.668V5.327c0-.718-.392-.71-.976-.696a11.321 11.321 0 0 1-.519 0Zm4.084.015c-.266.053-.437.223-.437.681v7.992c0 .703.367.689.918.668c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.554.02.928.035.928-.668V9.056a1.545 1.545 0 0 1 1.577-1.695a1.534 1.534 0 0 1 1.62 1.663v4.261c0 .704.366.69.917.669c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.551.02.917.035.917-.668V7.83a3.195 3.195 0 0 0-3.388-3.335a2.674 2.674 0 0 0-2.387 1.066c.011-.394-.117-.916-.436-.916c-.092 0-.233-.005-.393-.01c-.4-.012-.92-.028-1.11.01"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex whitespace-nowrap animate-scroll">
+          <p class="inline-block text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+          <p class="inline-block ml-8 text-[8px]">
+            &copy; 2025 PatKaiUI / Patrick Kaiser. Alle Rechte vorbehalten.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
