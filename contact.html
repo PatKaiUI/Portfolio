@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Patrick Kaiser" />
+    <meta
+      name="description"
+      content="Kontakt - Portfolio von Patrick Kaiser - Webentwickler mit Leidenschaft für Design"
+    />
+    <meta
+      name="keywords"
+      content="Kontakt, Webentwicklung, Portfolio, Patrick Kaiser, Webdesign, Frontend, UI/UX"
+    />
     <link rel="icon" href="./pictures/PatKaiLogo.webp" />
     <link
       href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@100..900&display=swap"
@@ -60,52 +68,81 @@
       class="bg-main1 text-main2 fixed w-full z-50 shadow-md backdrop-blur-md bg-opacity-70"
     >
       <div
-        class="container mx-auto px-6 py-4 flex items-center justify-between"
+        class="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between"
       >
-        <div class="flex items-center">
+        <div class="flex items-center flex-shrink-0">
           <img
-            class="w-12 h-12 rounded-full"
+            class="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex-shrink-0"
             src="./pictures/PatKai.webp"
             alt="Logo von PatKaiUI"
+            width="48"
+            height="48"
           />
-          <p class="text-4xl ml-16 font-comforter font-thin">Patrick Kaiser</p>
+          <p
+            class="text-lg sm:text-2xl md:text-3xl lg:text-4xl ml-2 sm:ml-4 md:ml-8 lg:ml-16 font-comforter font-thin flex-shrink-0"
+          >
+            Patrick Kaiser
+          </p>
         </div>
 
         <!-- NAVIGATION -->
-        <nav class="flex items-center">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <ul class="nav-menu flex space-x-8">
-            <li>
+        <nav class="flex items-center flex-shrink-0">
+          <button
+            class="hamburger p-2 focus:outline-none focus:ring-2 focus:ring-alt1 lg:hidden"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="block w-6 h-0.5 bg-main2 mb-1.5"></span>
+            <span class="block w-6 h-0.5 bg-main2 mb-1.5"></span>
+            <span class="block w-6 h-0.5 bg-main2"></span>
+          </button>
+          <ul
+            id="nav-menu"
+            class="nav-menu hidden lg:flex space-x-4 xl:space-x-8"
+            role="menubar"
+          >
+            <li role="none">
               <a
                 href="./index.html"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Home</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
-                href="#aboutme"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                href="./index.html#aboutme"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Über mich</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
-                href="#skills"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                href="./index.html#skills"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Fähigkeiten</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
-                href="#projects"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                href="./index.html#projects"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Projekte</a
               >
+            </li>
+            <li role="none">
+              <a
+                href="./contact.html"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
+                aria-current="page"
+              >
+                Kontakt
+              </a>
             </li>
           </ul>
         </nav>
@@ -120,13 +157,17 @@
       >
         <div class="absolute inset-0 bg-main1 bg-opacity-40"></div>
         <div
-          class="container mx-auto px-6 py-20 relative z-10 h-full flex items-center justify-center"
+          class="container mx-auto px-4 sm:px-6 py-20 relative z-10 h-full flex items-center justify-center"
         >
           <div class="max-w-md w-full mx-auto">
-            <h2 class="text-5xl mb-12 text-center font-comforter text-main2">
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 text-center font-comforter text-main2"
+            >
               Kontaktieren Sie mich
             </h2>
-            <form class="bg-main2/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+            <form
+              class="bg-main2/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg shadow-lg"
+            >
               <div class="mb-4">
                 <label
                   for="name"
@@ -137,7 +178,7 @@
                   type="text"
                   id="name"
                   name="name"
-                  class="w-full px-3 py-2 rounded-lg border border-alt1 focus:outline-none focus:border-alt2 text-sm"
+                  class="w-full px-3 py-2 rounded-lg border border-alt1 focus:outline-none focus:border-alt2 text-sm text-main1"
                   required
                 />
               </div>
@@ -184,37 +225,40 @@
     <footer
       class="bg-main1 text-main2 py-8 backdrop-blur-md bg-opacity-70 overflow-hidden"
     >
-      <div class="container mx-auto px-6">
+      <div class="container mx-auto px-4 sm:px-6">
         <div
-          class="footer-content flex flex-col md:flex-row justify-between items-start mb-8"
+          class="footer-content flex flex-row justify-between items-start mb-8 gap-4 sm:gap-8"
         >
-          <div class="footer-section mb-6 md:mb-0">
-            <h3 class="text-xl font-bold mb-2 underline">Kontakt</h3>
-            <p class="text-sm">
+          <div class="footer-section flex-shrink-0 min-w-0">
+            <h3 class="text-lg sm:text-xl font-bold mb-2 underline">Kontakt</h3>
+            <p class="text-xs sm:text-sm">
               Patrick Kaiser<br />
               Email:
               <a
                 href="mailto:mailbox-patrickkaiser@web.de"
-                class="hover:text-alt1 text-sm transition-colors duration-300"
+                class="hover:text-alt1 text-xs sm:text-sm transition-colors duration-300 break-words"
                 >mailbox-patrickkaiser@web.de</a
               >
             </p>
           </div>
-          <div class="footer-section">
-            <h3 class="text-xl font-bold mb-2 underline">Social Media</h3>
-            <div class="icons flex justify-center space-x-5">
+          <div class="footer-section flex-shrink-0 min-w-0">
+            <h3 class="text-lg sm:text-xl font-bold mb-2 underline">
+              Social Media
+            </h3>
+            <div class="icons flex justify-center space-x-3 sm:space-x-5">
               <a
                 href="https://www.github.com/PatKaiUI"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                class="hover:text-alt1 transition-colors duration-300"
+                class="hover:text-alt1 transition-colors duration-300 flex-shrink-0"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
+                  width="24"
+                  height="24"
                   viewBox="0 0 432 416"
+                  class="sm:w-[30px] sm:h-[30px]"
                 >
                   <path
                     fill="currentColor"
@@ -227,13 +271,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                class="hover:text-alt1 transition-colors duration-300"
+                class="hover:text-alt1 transition-colors duration-300 flex-shrink-0"
               >
                 <svg
-                  height="30"
-                  width="30"
+                  height="24"
+                  width="24"
                   viewBox="0 0 14 14"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="sm:w-[30px] sm:h-[30px]"
                 >
                   <path
                     d="M2.913 2.362c.26-.268.403-.626.4-.998A1.417 1.417 0 0 0 1.928 0A1.428 1.428 0 0 0 .532 1.364a1.449 1.449 0 0 0 1.396 1.428a1.42 1.42 0 0 0 .985-.43M1.67 4.63c-.587-.013-.987-.022-.987.696v7.992c0 .703.382.689.932.668c.1-.004.205-.008.314-.008c.11 0 .215.004.314.008c.548.02.922.035.922-.668V5.327c0-.718-.392-.71-.976-.696a11.321 11.321 0 0 1-.519 0Zm4.084.015c-.266.053-.437.223-.437.681v7.992c0 .703.367.689.918.668c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.554.02.928.035.928-.668V9.056a1.545 1.545 0 0 1 1.577-1.695a1.534 1.534 0 0 1 1.62 1.663v4.261c0 .704.366.69.917.669c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.551.02.917.035.917-.668V7.83a3.195 3.195 0 0 0-3.388-3.335a2.674 2.674 0 0 0-2.387 1.066c.011-.394-.117-.916-.436-.916c-.092 0-.233-.005-.393-.01c-.4-.012-.92-.028-1.11.01"

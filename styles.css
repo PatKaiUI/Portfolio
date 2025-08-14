@@ -65,6 +65,8 @@ section {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    height: auto;
+    min-height: 100vh;
   }
 
   .nav-menu.active {
@@ -80,6 +82,7 @@ section {
     text-align: left;
     padding: 0.5rem 0;
     font-size: 1.1rem;
+    color: #f4f4f4;
   }
 
   .hamburger.active span:nth-child(2) {
@@ -210,4 +213,20 @@ header {
 
 .hamburger {
   z-index: 51;
+}
+
+/* Mobile menu specific styles */
+@media (max-width: 1023px) {
+  .nav-menu {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .nav-menu:not(.active) {
+    left: -100%;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
 }
