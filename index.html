@@ -69,61 +69,80 @@
       class="bg-main1 text-main2 fixed w-full z-50 shadow-md backdrop-blur-md bg-opacity-70"
     >
       <div
-        class="container mx-auto px-6 py-4 flex items-center justify-between"
+        class="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between"
       >
-        <div class="flex items-center">
+        <div class="flex items-center flex-shrink-0">
           <img
-            class="w-12 h-12 rounded-full"
+            class="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex-shrink-0"
             src="./pictures/PatKaiLogo.webp"
             alt="Logo von PatKaiUI"
+            width="48"
+            height="48"
           />
-          <p class="text-4xl ml-16 mr-12 font-comforter font-thin">
+          <p
+            class="text-lg sm:text-2xl md:text-3xl lg:text-4xl ml-2 sm:ml-4 md:ml-8 lg:ml-16 font-comforter font-thin flex-shrink-0"
+          >
             Patrick Kaiser
           </p>
         </div>
 
         <!-- NAVIGATION -->
-        <nav class="flex items-center">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <ul class="nav-menu flex space-x-8">
-            <li>
+        <nav class="flex items-center flex-shrink-0">
+          <button
+            class="hamburger p-2 focus:outline-none focus:ring-2 focus:ring-alt1 lg:hidden"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="block w-6 h-0.5 bg-main2 mb-1.5"></span>
+            <span class="block w-6 h-0.5 bg-main2 mb-1.5"></span>
+            <span class="block w-6 h-0.5 bg-main2"></span>
+          </button>
+          <ul
+            id="nav-menu"
+            class="nav-menu hidden lg:flex space-x-4 xl:space-x-8"
+            role="menubar"
+          >
+            <li role="none">
               <a
                 href="./index.html"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
+                aria-current="page"
                 >Home</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
                 href="#aboutme"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Über mich</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
                 href="#skills"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Fähigkeiten</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
                 href="#projects"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
                 >Projekte</a
               >
             </li>
-            <li>
+            <li role="none">
               <a
                 href="./contact.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                class="relative hover:text-alt1 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-alt1 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out text-sm xl:text-base"
+                role="menuitem"
               >
                 Kontakt
               </a>
@@ -141,24 +160,27 @@
       >
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div
-          class="container mx-auto ml-6 h-full flex flex-col justify-center pt-16 px-6 pb-30 relative z-10"
+          class="container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center pt-20 sm:pt-24 md:pt-16 relative z-10"
         >
           <h1
-            class="text-4xl font-bold mb-4 ml-2 animate-[bounceIn_1s_ease-in-out,bounce_1s_ease-in-out_infinite_0.5s]"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center sm:text-left animate-[bounceIn_1s_ease-in-out,bounce_1s_ease-in-out_infinite_0.5s]"
           >
             Hi 👋!
           </h1>
-          <p class="text-xl ml-2 max-w-lg animate-[bounceIn_1s_ease-in-out]">
+          <p
+            class="text-lg sm:text-xl max-w-lg mx-auto sm:mx-0 text-center sm:text-left animate-[bounceIn_1s_ease-in-out] leading-relaxed"
+          >
             Ich bin Patrick,<br />
-            <span class="text-xl max-w-lg animate-[bounceIn_1s_ease-in-out]"
+            <span
+              class="text-lg sm:text-xl max-w-lg animate-[bounceIn_1s_ease-in-out]"
               >Webentwickler mit Leidenschaft für Design!</span
             >
           </p>
           <!-- Kontakt Button -->
-          <div class="flex justify-left mt-6">
+          <div class="flex justify-center sm:justify-start mt-6 sm:mt-8">
             <a
               href="./contact.html"
-              class="mt-8 ml-2 px-6 py-2 bg-main2 text-main1 rounded-full font-bold hover:bg-alt1 hover:text-main2 transition-all duration-300 animate-[bounceIn_1s_ease-in-out] text-lg"
+              class="px-6 py-3 sm:px-8 sm:py-4 bg-main2 text-main1 rounded-full font-bold hover:bg-alt1 hover:text-main2 transition-all duration-300 animate-[bounceIn_1s_ease-in-out] text-base sm:text-lg flex-shrink-0"
             >
               Kontakt aufnehmen
             </a>
@@ -169,14 +191,14 @@
       <!-- ABOUT ME -->
       <section
         id="aboutme"
-        class="py-20 bg-gradient-to-br from-main2 to-alt1 text-main1 shadow-[0_35px_60px_-15px_rgba(163,149,174,0.3)] min-h-[100vh]"
+        class="py-16 sm:py-20 bg-gradient-to-br from-main2 to-alt1 text-main1 shadow-[0_35px_60px_-15px_rgba(163,149,174,0.3)] min-h-screen"
       >
-        <div class="container mx-auto px-4 sm:px-6 pt-16 md:pt-16">
+        <div class="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 md:pt-16">
           <div
-            class="flex flex-col md:flex-row items-start justify-center gap-24 md:gap-24 max-w-8xl mx-auto h-[calc(100vh-12rem)]"
+            class="flex flex-col lg:flex-row items-start justify-center gap-8 sm:gap-12 lg:gap-24 max-w-7xl mx-auto"
           >
             <div
-              class="relative w-[12rem] h-[12rem] md:w-[26rem] md:h-[32rem] mx-auto md:mx-0 pt-80 md:pt-20 md:mt-0"
+              class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-96 lg:w-96 lg:h-[28rem] mx-auto lg:mx-0 order-2 lg:order-1"
             >
               <div class="animate-wiggle">
                 <img
@@ -184,33 +206,41 @@
                   alt="Emoji von Patrick"
                   loading="lazy"
                   class="w-full h-full object-cover clip-polygon"
+                  width="416"
+                  height="416"
                 />
               </div>
             </div>
             <div
-              class="max-w-3xl ml-0 md:ml-12 mt-16 md:mt-16 px-4 md:px-0 pb-80 md:pb-0"
+              class="max-w-2xl lg:max-w-3xl mx-auto lg:mx-0 lg:ml-12 order-1 lg:order-2 flex-shrink-0"
             >
               <h2
-                class="text-5xl mb-12 text-center md:text-left font-comforter"
+                class="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 text-center lg:text-left font-comforter"
               >
                 Über mich
               </h2>
-              <p class="text-m md:text-lg mb-6 animate-fade-in">
+              <p
+                class="text-base sm:text-lg mb-4 sm:mb-6 animate-fade-in leading-relaxed"
+              >
                 Ich bin ein leidenschaftlicher Webentwickler mit einer großen
                 Begeisterung für UI/UX-Design und kreative Gestaltung.
               </p>
-              <p class="text-m md:text-lg mb-6 animate-fade-in">
+              <p
+                class="text-base sm:text-lg mb-4 sm:mb-6 animate-fade-in leading-relaxed"
+              >
                 Derzeit feile ich an meinen Fähigkeiten in HTML, CSS und
                 JavaScript, um bald professionelle Dienstleistungen wie
                 Websites, Logos und mehr anzubieten.
               </p>
-              <p class="text-m md:text-lg mb-6 animate-fade-in">
+              <p
+                class="text-base sm:text-lg mb-4 sm:mb-6 animate-fade-in leading-relaxed"
+              >
                 Ich liebe es, zu coden, zu kreieren und zu designen – quasi ein
                 Dreierpack Kreativität! Ständig auf der Suche nach neuen
                 Herausforderungen, wächst und verändert sich diese Seite
                 regelmäßig.
               </p>
-              <p class="text-m md:text-lg animate-fade-in">
+              <p class="text-base sm:text-lg animate-fade-in leading-relaxed">
                 Ich freue mich darauf, deine Ideen mit atemberaubenden Designs
                 und funktionalen Websites zum Leben zu erwecken – denn wer will
                 schon eine langweilige Webseite? 😄
@@ -221,20 +251,30 @@
       </section>
 
       <!-- SKILLS -->
-      <section id="skills" class="py-20 bg-main1">
-        <div class="container mx-auto px-6 pt-12 md:pt-12">
-          <h2 class="text-5xl mb-12 text-center font-comforter text-main2">
+      <section id="skills" class="py-16 sm:py-20 bg-main1">
+        <div class="container mx-auto px-4 sm:px-6 pt-16 sm:pt-20 md:pt-12">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 text-center font-comforter text-main2"
+          >
             Meine Fähigkeiten
           </h2>
-          <div class="grid md:grid-cols-4 gap-4 md:gap-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
+          >
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-pen-nib text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">UI/UX Design</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-pen-nib text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  UI/UX Design
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[45%]"
                   data-level="45"
@@ -242,13 +282,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-js text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">JavaScript</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-brands fa-js text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  JavaScript
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[35%]"
                   data-level="35"
@@ -256,14 +302,22 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-html5 text-xl text-main1"></i>
-                <i class="fa-brands fa-css3-alt text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">HTML & CSS</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-brands fa-html5 text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <i
+                  class="fa-brands fa-css3-alt text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  HTML & CSS
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[70%]"
                   data-level="70"
@@ -271,15 +325,22 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-git-alt text-xl text-main1"></i>
-                <i class="fa-brands fa-github-alt text-xl text-main1"></i>
-
-                <h6 class="text-sm font-bold text-main1">Git & GitHub</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-brands fa-git-alt text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <i
+                  class="fa-brands fa-github-alt text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Git & GitHub
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[40%]"
                   data-level="40"
@@ -287,13 +348,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-magnifying-glass text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">SEO</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-magnifying-glass text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  SEO
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[25%]"
                   data-level="25"
@@ -301,13 +368,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-universal-access text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">Accessibility</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-universal-access text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Accessibility
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[15%]"
                   data-level="15"
@@ -315,13 +388,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-wordpress text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">WordPress</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-brands fa-wordpress text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  WordPress
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[15%]"
                   data-level="15"
@@ -329,13 +408,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-node-js text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">Node.js</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-brands fa-node-js text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Node.js
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[40%]"
                   data-level="40"
@@ -343,85 +428,119 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-react text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">React</h6>
-              </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
-                <div
-                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
-                  data-level="10"
-                ></div>
-              </div>
-            </div>
-            <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
-            >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-brands fa-python text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">Python</h6>
-              </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
-                <div
-                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
-                  data-level="5"
-                ></div>
-              </div>
-            </div>
-            <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
-            >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-database text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">Datenbanken</h6>
-              </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
-                <div
-                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
-                  data-level="5"
-                ></div>
-              </div>
-            </div>
-            <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
-            >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-code text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">API Integration</h6>
-              </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
-                <div
-                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
-                  data-level="5"
-                ></div>
-              </div>
-            </div>
-            <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
-            >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-cart-shopping text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">E-Commerce</h6>
-              </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
-                <div
-                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
-                  data-level="10"
-                ></div>
-              </div>
-            </div>
-            <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
-            >
-              <div class="flex items-center justify-center gap-6 mb-2">
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
                 <i
-                  class="fa-solid fa-mobile-screen-button text-xl text-main1"
+                  class="fa-brands fa-react text-lg sm:text-xl text-main1 flex-shrink-0"
                 ></i>
-                <h6 class="text-sm font-bold text-main1">Responsive Design</h6>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  React
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
+                  data-level="10"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
+            >
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-brands fa-python text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Python
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
+                  data-level="5"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
+            >
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-database text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Datenbanken
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
+                  data-level="5"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
+            >
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-code text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  API Integration
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[5%]"
+                  data-level="5"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
+            >
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-cart-shopping text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  E-Commerce
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
+                <div
+                  class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
+                  data-level="10"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
+            >
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-mobile-screen-button text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Responsive Design
+                </h6>
+              </div>
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[50%]"
                   data-level="50"
@@ -429,18 +548,20 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
                 <i
-                  class="fa-solid fa-screwdriver-wrench text-xl text-main1"
+                  class="fa-solid fa-screwdriver-wrench text-lg sm:text-xl text-main1 flex-shrink-0"
                 ></i>
-                <i class="fa-solid fa-bug text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">
+                <i class="fa-solid fa-bug text-main1 flex-shrink-0"></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
                   Testing & Debugging
                 </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[20%]"
                   data-level="20"
@@ -448,13 +569,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-people-roof text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">Agile Methodiken</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-people-roof text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Agile Methodiken
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
                   data-level="10"
@@ -462,13 +589,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-file-lines text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">Content Management</h6>
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-file-lines text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
+                  Content Management
+                </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[30%]"
                   data-level="30"
@@ -476,15 +609,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-share-nodes text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-share-nodes text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
                   Social Media Integration
                 </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[10%]"
                   data-level="10"
@@ -492,15 +629,19 @@
               </div>
             </div>
             <div
-              class="skill-card group bg-main2 p-4 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300"
+              class="skill-card group bg-main2 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
-              <div class="flex items-center justify-center gap-6 mb-2">
-                <i class="fa-solid fa-gauge-simple-high text-xl text-main1"></i>
-                <h6 class="text-sm font-bold text-main1">
+              <div class="flex items-center justify-center gap-4 sm:gap-6 mb-2">
+                <i
+                  class="fa-solid fa-gauge-simple-high text-lg sm:text-xl text-main1 flex-shrink-0"
+                ></i>
+                <h6
+                  class="text-xs sm:text-sm font-bold text-main1 text-center flex-shrink-0"
+                >
                   Performance Optimierung
                 </h6>
               </div>
-              <div class="skill-bar bg-alt2 rounded-full h-3 mb-2">
+              <div class="skill-bar bg-alt2 rounded-full h-2 sm:h-3 mb-2">
                 <div
                   class="bg-skillHover h-full rounded-full transition-all duration-1000 ease-in-out w-0 group-hover:w-[20%]"
                   data-level="20"
@@ -514,16 +655,20 @@
       <!-- PROJECTS -->
       <section
         id="projects"
-        class="py-20 bg-gradient-to-br from-alt1 to-main2 text-main2"
+        class="py-16 sm:py-20 bg-gradient-to-br from-alt1 to-main2 text-main2"
       >
-        <div class="container mx-auto px-8 pt-12 md:pt-12">
-          <h2 class="text-5xl mb-12 text-center font-comforter text-main1">
+        <div class="container mx-auto px-4 sm:px-8 pt-16 sm:pt-20 md:pt-12">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 text-center font-comforter text-main1"
+          >
             Meine Projekte
           </h2>
-          <div class="grid md:grid-cols-3 gap-4 md:gap-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
+          >
             <!-- Project Card 1 -->
             <div
-              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              class="project-card group bg-main1 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
               <div
                 class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
@@ -532,24 +677,29 @@
                 <img
                   src="./pictures/firstPortfolio.png"
                   alt="Project 1"
-                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  width="800"
+                  height="450"
                 />
               </div>
-              <h3 class="text-xl font-bold mb-2 text-main2">
+              <h3 class="text-lg sm:text-xl font-bold mb-2 text-main2">
                 Erstes Portfolio
               </h3>
-              <p class="text-main2 mb-4">
+              <p class="text-sm sm:text-base text-main2 mb-4 leading-relaxed">
                 Eine responsive Portfolio-Website mit modernem Design und
                 interaktiven Elementen.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >HTML</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >CSS</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >JavaScript</span
                 >
               </div>
@@ -557,7 +707,7 @@
 
             <!-- Project Card 2 -->
             <div
-              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              class="project-card group bg-main1 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
               <div
                 class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
@@ -566,24 +716,32 @@
                 <img
                   src="./pictures/TetrisGame.png"
                   alt="Project 2"
-                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  width="800"
+                  height="450"
                 />
               </div>
-              <h3 class="text-xl font-bold mb-2 text-main2">Tetris Spiel</h3>
-              <p class="text-main2 mb-4">
+              <h3 class="text-lg sm:text-xl font-bold mb-2 text-main2">
+                Tetris Spiel
+              </h3>
+              <p class="text-sm sm:text-base text-main2 mb-4 leading-relaxed">
                 Ein Tetris Spiel im Browser mit HTML, CSS, JavaScript.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >JavaScript</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >Node.js</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >HTML</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >CSS</span
                 >
               </div>
@@ -591,7 +749,7 @@
 
             <!-- Project Card 3 -->
             <div
-              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              class="project-card group bg-main1 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
               <div
                 class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
@@ -600,27 +758,31 @@
                 <img
                   src="./pictures/NoticeMe.png"
                   alt="Project 3"
-                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  width="800"
+                  height="450"
                 />
               </div>
-              <h3 class="text-xl font-bold mb-2 text-main2">
+              <h3 class="text-lg sm:text-xl font-bold mb-2 text-main2">
                 Notizen-Konsolen-Programm
               </h3>
-              <p class="text-main2 mb-4">
+              <p class="text-sm sm:text-base text-main2 mb-4 leading-relaxed">
                 Ein Notizen-Konsolen-Programm mit Node.js.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >Node.js</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >JavaScript</span
                 >
               </div>
             </div>
             <!-- Project Card 4 -->
             <div
-              class="project-card group bg-main1 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              class="project-card group bg-main1 p-4 sm:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
               <div
                 class="relative overflow-hidden rounded-lg mb-4 cursor-pointer"
@@ -629,24 +791,32 @@
                 <img
                   src="./pictures/toDoApp.png"
                   alt="Project 4"
-                  class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                  width="800"
+                  height="450"
                 />
               </div>
-              <h3 class="text-xl font-bold mb-2 text-main2">To-Do-App</h3>
-              <p class="text-main2 mb-4">
+              <h3 class="text-lg sm:text-xl font-bold mb-2 text-main2">
+                To-Do-App
+              </h3>
+              <p class="text-sm sm:text-base text-main2 mb-4 leading-relaxed">
                 Eine interaktive To-Do-App mit HTML, CSS, JS, React und DnD-Kit.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >HTML</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >CSS</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >JavaScript</span
                 >
-                <span class="px-3 py-1 bg-alt1 text-main1 rounded-full text-sm"
+                <span
+                  class="px-2 sm:px-3 py-1 bg-alt1 text-main1 rounded-full text-xs sm:text-sm flex-shrink-0"
                   >React</span
                 >
               </div>
